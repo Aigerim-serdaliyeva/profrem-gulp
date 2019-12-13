@@ -6749,7 +6749,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 5px;
   border-radius: 50%; }
   .owl-carousel .owl-dot.active {
-    background: #fff !important; }
+    background: #FFED00 !important; }
 
 .remodal {
   text-align: center;
@@ -7068,6 +7068,63 @@ h1, h2, h3, h4, h5, h6 {
       bottom: 0;
       left: 0; }
 
+.s-portfolio {
+  padding: 120px 0 0px;
+  background-image: url("../img/main-back.jpg"); }
+  .s-portfolio .page-top {
+    display: none; }
+  .s-portfolio .tab {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 10px;
+    height: 820px;
+    overflow: hidden; }
+    .s-portfolio .tab__links {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      max-width: 450px;
+      margin-left: 10px;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none; }
+      .s-portfolio .tab__links::-webkit-scrollbar {
+        display: none; }
+    .s-portfolio .tab__links--mob {
+      display: none; }
+    .s-portfolio .tab__link {
+      cursor: pointer;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      width: 50%; }
+    .s-portfolio .tab__contents {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+    .s-portfolio .tab__content {
+      display: none;
+      width: 100%; }
+      .s-portfolio .tab__content img {
+        width: 100%;
+        max-height: 820px; }
+      .s-portfolio .tab__content.active {
+        display: block; }
+
 .s-reviews {
   background-image: url("../img/reviews-back.jpg");
   padding: 79px 0; }
@@ -7154,7 +7211,11 @@ h1, h2, h3, h4, h5, h6 {
 /*==========  Desktop First  ==========*/
 @media (max-width: 1600px) {
   .page-top {
-    right: 100px; } }
+    right: 100px; }
+  .s-portfolio .tab {
+    height: 680px; }
+    .s-portfolio .tab__content img {
+      max-height: 680px; } }
 
 @media (max-width: 1400px) {
   .page-top {
@@ -7167,8 +7228,28 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 180px; }
   .s-gallery .gallery {
     height: 900px; }
+  .s-portfolio .tab {
+    height: 580px; }
+    .s-portfolio .tab__links {
+      max-width: 400px; }
+    .s-portfolio .tab__content img {
+      max-height: 580px; }
   .s-map iframe {
     height: 500px; } }
+
+@media (max-width: 1300px) {
+  .s-portfolio .tab {
+    height: 560px; }
+    .s-portfolio .tab__links {
+      max-width: 380px; }
+    .s-portfolio .tab__content img {
+      max-height: 560px; } }
+
+@media (max-width: 1199.98px) {
+  .s-portfolio .tab {
+    height: 500px; }
+    .s-portfolio .tab__links {
+      max-width: 360px; } }
 
 @media (max-width: 991.98px) {
   .page-top.fixed {
@@ -7273,7 +7354,34 @@ h1, h2, h3, h4, h5, h6 {
       height: 1px;
       top: -20px; }
   .s-gallery .gallery {
-    height: 600px; } }
+    height: 600px; }
+  .s-portfolio .tab {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 0 10px; }
+    .s-portfolio .tab__blog {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+    .s-portfolio .tab__links {
+      max-width: 1000px;
+      margin: 5px 0 0 0; }
+      .s-portfolio .tab__links--web {
+        display: none; }
+      .s-portfolio .tab__links--mob {
+        display: block; }
+        .s-portfolio .tab__links--mob .owl-dots {
+          margin: 15px 0; }
+    .s-portfolio .tab__link {
+      width: 33.33%; } }
 
 @media (max-width: 767.98px) {
   .page-top {

@@ -6,7 +6,6 @@ $(document).ready(function () {
   var $header = $(".header");
   var $menu = $(".main-menu");
   var headerHeight = 99;
-  // var $hamburger = $(".hamburger");
 
   // забираем utm из адресной строки и пишем в sessionStorage, чтобы отправить их на сервер при form submit
   var utms = parseGET();
@@ -97,6 +96,14 @@ $(document).ready(function () {
   }
   stickyTop();
 
+  $(".tab__link").click(function() {
+    var $tab = $(this).closest(".tab");
+    var id = $(this).data("id");
+  
+    $tab.find(".tab__link").removeClass("active");
+    $(this).addClass("active")
+    $tab.find(".tab__content").removeClass("active").filter("[data-tab=" + id + "]").addClass("active");
+  });
 
   // при нажатии на меню плавно скролит к соответсвующему блоку
   $(".link a").click(function (e) {
@@ -190,6 +197,17 @@ $(document).ready(function () {
 
 
   $(".carousel-reviews").owlCarousel({
+    loop: true,
+    smartSpeed: 500,
+    margin: 30,
+    navText: ['', ''],
+    responsive: {
+      0: { items: 1, mouseDrag: false, dots: true, nav: true },
+      480: { items: 1, mouseDrag: true, dots: true, nav: true },
+    },
+  });
+
+  $(".carousel-portfolio").owlCarousel({
     loop: true,
     smartSpeed: 500,
     margin: 30,
