@@ -232,7 +232,48 @@ $(document).ready(function () {
     draggable: false,
   });
 
+  
+
+
 });
+
+$(document).on('closing', '.remodal', function (e) {
+    
+    e.currentTarget.getElementsByClassName('form-success')[0].classList.remove('d-flex-i')
+  });
+
+async function submitForm(e) {
+    try {
+        e.preventDefault();
+
+        const [  , name, phone ] = e.currentTarget.getElementsByTagName('input');     
+        const form = e.currentTarget.parentElement.parentElement;      
+        const loader = form.getElementsByClassName('form-loader')[0]                 
+            
+        loader.classList.toggle('d-flex-i')
+
+        await axios({
+            method: 'POST',
+            url: 'mailer.php',
+            data: {
+                name: name.value,
+                phone: phone.value
+            }
+        })
+
+        // const timeout = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+        // await timeout(3000)
+
+        loader.classList.toggle('d-flex-i')
+        form.getElementsByClassName('form-success')[0].classList.add('d-flex-i')
+
+    }
+    catch(err) {
+        throw(err)
+    }
+    
+
+  }
 
 function validateEmail(email) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

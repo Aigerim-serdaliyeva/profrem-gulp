@@ -456,7 +456,7 @@
     <div class="remodal__title">ПОлучить консультацию</div>
 
     <div class="form">
-      <form >        
+      <form class="package-standard" onsubmit="submitForm(event)">        
         <div class="form__info">Заполните поля для получения персональной консультации, наш оператор обязательно вам перезвонит.</div>
         <div class="form__content">
           <input type="hidden" name="info" value="ПАКЕТ РЕМОНТНЫХ РАБОТ «СТАНДАРТ»">
@@ -470,9 +470,18 @@
             <input type="tel" class="input" name="phone" placeholder="Ваш телефон *" required minlength="10">
             <span class="error-message">Заполните это поле</span>
           </div>
+          
         </div>
-        <button class="button button--yellow form-submit" type="submit" id="otpravit_paket">Отправить</button>
+        <button class="button button--yellow" type="submit" id="otpravit_paket" >Отправить</button>
       </form>
+    </div>
+
+    <div class="form-success">
+        <h2> Ваша заявка успешно отправлена </h2>        
+    </div>
+
+    <div class="form-loader">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
   </div>
 
@@ -482,7 +491,7 @@
     <div class="remodal__title">ПОлучить консультацию</div>
 
     <div class="form">
-      <form id="form-comfort">        
+      <form id="form-comfort" class="package-comfort" onsubmit="submitForm(event)">        
         <div class="form__info">Заполните поля для получения персональной консультации, наш оператор обязательно вам перезвонит.</div>
         <div class="form__content">
           <input type="hidden" name="info" value="ПАКЕТ РЕМОНТНЫХ РАБОТ «КОМФОРТ»">
@@ -497,8 +506,16 @@
             <span class="error-message">Заполните это поле</span>
           </div>
         </div>
-        <button class="button button--yellow form-submit" type="submit" id="otpravit_paket">Отправить</button>
+        <button class="button button--yellow" type="submit" id="otpravit_paket">Отправить</button>
       </form>
+    </div>
+
+    <div class="form-success">
+        <h2> Ваша заявка успешно отправлена </h2>        
+    </div>
+
+    <div class="form-loader">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
   </div>
 
