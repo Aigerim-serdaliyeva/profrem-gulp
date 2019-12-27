@@ -14,7 +14,7 @@ try {
     $mail->Host       = 'mail.profrem.kz';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'no-reply@profrem.kz';                     // SMTP username
-    $mail->Password   = 'Glo20Bal19On@)!(';                               // SMTP password
+    $mail->Password   = '153624profrem';                               // SMTP password
     $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 25;      
     $mail->CharSet 	= 'utf-8';                              // TCP port to connect to

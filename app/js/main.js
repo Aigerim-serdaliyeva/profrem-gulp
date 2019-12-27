@@ -250,7 +250,7 @@ async function submitForm(e) {
         const form = e.currentTarget.parentElement.parentElement;      
         const loader = form.getElementsByClassName('form-loader')[0]                 
             
-        loader.classList.toggle('d-flex-i')
+        // loader.classList.toggle('d-flex-i')
 
         await axios({
             method: 'POST',
@@ -264,8 +264,8 @@ async function submitForm(e) {
         // const timeout = (ms) => new Promise(resolve => setTimeout(resolve, ms));
         // await timeout(3000)
 
-        loader.classList.toggle('d-flex-i')
-        form.getElementsByClassName('form-success')[0].classList.add('d-flex-i')
+        // loader.classList.toggle('d-flex-i')
+        // form.getElementsByClassName('form-success')[0].classList.add('d-flex-i')
 
     }
     catch(err) {
