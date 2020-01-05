@@ -7043,9 +7043,11 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center; }
 
 .s-gallery .gallery {
-  min-height: 1090px;
+  height: 1090px;
   overflow: hidden;
   position: relative; }
+  .s-gallery .gallery .slick-list, .s-gallery .gallery .draggable {
+    height: 1090px !important; }
   .s-gallery .gallery__block {
     display: -webkit-box;
     display: -webkit-flex;
@@ -7062,11 +7064,10 @@ h1, h2, h3, h4, h5, h6 {
       content: "";
       position: absolute;
       background-image: url("../img/increase.svg");
+      width: 100%;
+      height: 100%;
       background-repeat: no-repeat;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0; }
+      background-position: center center; }
 
 .s-portfolio {
   padding: 120px 0 0px;

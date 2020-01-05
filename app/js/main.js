@@ -218,21 +218,34 @@ $(document).ready(function () {
     },
   });
 
-  $('.gallery').slick({    
+  // $('.gallery').slick({    
+  //   vertical: true,
+  //   autoplay: true,
+  //   infinite: true,
+  //   autoplaySpeed: 0,
+  //   slidesToScroll: 1,
+  //   slidesToShow: 5,
+  //   arrows: false,
+  //   cssEase: 'linear',
+  //   speed: 8000,
+  //   initialSlide: 1,
+  //   draggable: false,
+  // });
+
+  $('.gallery').slick({
     vertical: true,
     autoplay: true,
-    infinite: true,
-    autoplaySpeed: 0,
-    slidesToScroll: 1,
-    slidesToShow: 5,
     arrows: false,
-    cssEase: 'linear',
-    speed: 8000,
-    initialSlide: 1,
-    draggable: false,
-  });
-
-  
+    slidesToShow: 1,
+    infinite: true,
+    cssEase: "linear",
+    autoplaySpeed: 0,
+    speed: 9000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    dots: false,
+    pauseOnDotsHover: false
+  })
 
 
 });
