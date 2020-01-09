@@ -7071,7 +7071,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .s-portfolio {
   padding: 120px 0 0px;
-  background-image: url("../img/main-back.jpg"); }
+  background: rgba(0, 0, 0, 0.8); }
   .s-portfolio .page-top {
     display: none; }
   .s-portfolio__title {
