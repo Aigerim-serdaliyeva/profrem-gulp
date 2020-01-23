@@ -6834,6 +6834,12 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 95px; }
 
+.fancybox-thumbs {
+  max-height: 100vh; }
+
+.portfolio-mob {
+  display: none; }
+
 .header {
   position: fixed;
   top: 0;
@@ -7546,6 +7552,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767.98px) {
   .page-top {
     display: none; }
+  .portfolio-desktop {
+    display: none; }
+  .portfolio-mob {
+    display: block; }
   .button {
     padding: 14px; }
   .input {

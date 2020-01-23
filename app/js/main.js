@@ -7,6 +7,12 @@ $(document).ready(function () {
   var $menu = $(".main-menu");
   var headerHeight = 99;
 
+  $('[data-fancybox="Portfolio"]').fancybox({
+    thumbs : {
+      autoStart : true
+    }
+  });
+
   // забираем utm из адресной строки и пишем в sessionStorage, чтобы отправить их на сервер при form submit
   var utms = parseGET();
   // проверяем есть ли utm в адресной строке, если есть то пишем в sessionStorage

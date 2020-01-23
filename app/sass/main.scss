@@ -43,6 +43,16 @@
   }
 }
 
+.fancybox-thumbs {
+  max-height: 100vh;
+}
+
+.portfolio {
+  &-mob {
+    display: none;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;

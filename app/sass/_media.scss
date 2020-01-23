@@ -242,6 +242,15 @@
     display: none;
   }
 
+  .portfolio {
+    &-desktop {
+      display: none;
+    }
+    &-mob {
+      display: block;
+    }
+  }
+
   .button {
     padding: 14px;
   }
